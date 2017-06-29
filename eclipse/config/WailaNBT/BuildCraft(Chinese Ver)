@@ -1,0 +1,143 @@
+#编辑于Minecraft1.7.10||BuildCraft7.1.22||Waila-1.5.10||WailaNBT-1.7.10-1.4||2017.6.29
+
+{
+	".*":
+	{
+		"net.minecraft.src.buildcraft.energy.TileEngineCreative": 
+		{
+      "energy":"function p(v){var r = (v);return '能量冗余:'+r+' RF/t'};"
+			#"progress":"function p(v){var r = (v*100);return '下次做功:'+r.toFixed(0)+' %'};"
+		},
+    
+		"net.minecraft.src.buildcraft.factory.TileLaser":
+		{
+      "battery>>>energy":"function p(v){var r = (v);return '能量存储:'+r+'/10000 RF'};",
+			"battery>>>maxReceive":"function p(v){var r = (v);return '最大接收:'+r+' RF/t'};"
+		},
+    
+		"net.minecraft.src.buildcraft.factory.TileAssemblyTable": 
+		{
+      "energy":"function p(v){var r = (v);return '能量存储:'+r+' RF'};",
+			"recipeId":"计划产物:"
+		},
+    
+		"net.minecraft.src.buildcraft.factory.TilePump":
+		{
+      "battery>>>energy":"function p(v){var r = (v);return '能量存储:'+r+'/1000 RF'};",
+			"battery>>>maxReceive":"function p(v){var r = (v);return '最大接收:'+r+' RF/t'};",
+			"tank>>>FluidName": "液体种类:",
+			"tank>>>Amount":"function p(v){var r = (v);return '液体存量:'+r+'/16000 mb'};"
+		},
+    
+		"net.minecraft.src.buildcraft.factory.TileAssemblyAdvancedWorkbench":
+		{
+      "energy":"function p(v){var r = (v);return '能量存储:'+r+' RF'};"
+		},
+    
+		"net.minecraft.src.buildcraft.factory.TileIntegrationTable":
+		{
+     	"energy":"function p(v){var r = (v);return '能量存储:'+r+' RF'};"
+		},
+    
+		"net.minecraft.src.buildcraft.energy.TileEngineWood":
+		{
+      "energy":"function p(v){var r = (v);return '当前输出:'+r+'*'};",
+			"heat":"function p(v){var r = (v);return '\u00A7f这不是RF能量!'};"
+		},
+    
+		"net.minecraft.src.buildcraft.energy.TileEngineStone":
+		{
+      "heat":"function p(v){var r = (v*1);return '\u00A7c热量:'+r.toFixed(1)+' ℃'};",
+      "energy":"function p(v){var r = (v);return '能量存储:'+r+' RF'};",
+			"burnTime":"function p(v){var r = (v);return '本次剩余燃烧时间:'+r+' t'};",
+			"totalBurnTime":"function p(v){var r = (v);return '本次总燃烧时间:'+r+' t'};",
+			"Items>>>0>>>id":"function p(v){var r = (v);return '内容物名称:'+names[r]};",
+			"Items>>>0>>>Count":"function p(v){var r = (v);return '内容物数量:'+r};"
+		},
+    
+		"net.minecraft.src.buildcraft.energy.TileEngineIron":
+		{
+      "heat":"function p(v){var r = (v*1);return '\u00A7c热量:'+r.toFixed(1)+' ℃'};",
+      "energy":"function p(v){var r = (v);return '能量存储:'+r+' RF'};",
+			"penaltyCooling":"cooling",
+			"tankCoolant>>>FluidName":"function p(v){var r = (v);return '冷却液名称:'+r};",
+			"tankCoolant>>>Amount":"function p(v){var r = (v);return '冷却液余量:'+r+'/10000 mb'};",
+			"tankFuel>>>FluidName":"function p(v){var r = (v);return '燃料名称:'+r};",
+			"tankFuel>>>Amount":"function p(v){var r = (v);return '燃料余量:'+r+'/10000 mb'};",
+			"Items>>>0>>>id":"function p(v){var r = (v);return '内容物名称:'+names[r]};",
+			"Items>>>0>>>Count":"function p(v){var r = (v);return '内容物数量:'+r};"
+		},
+    
+		"net.minecraft.src.buildcraft.factory.TileFloodGate":
+		{
+			"powered":"function p(v){var r = (v);if(v==0){return '状态:打开'} else{return '状态:关闭'}};",
+			"tank>>>FluidName":"液体种类:",
+			"tank>>>Amount":"function p(v){var r = (v);return '液体存量:'+r+'/2000 mb'};"
+		},
+    
+		"Filler":
+		{
+      "battery>>>energy":"function p(v){var r = (v);return '能量存储:'+r+'/30720 RF'};",
+			"battery>>>maxReceive":"function p(v){var r = (v);return '最大接收:'+r+' RF/t'};"
+		},
+    
+		"Machine":
+		{
+      "battery>>>energy":"function p(v){var r = (v);return '能量存储:'+r+'/20480 RF'};",
+			"battery>>>maxReceive":"function p(v){var r = (v);return '最大接收:'+r+' RF/t'};"
+		},
+    
+	  "net.minecraft.src.builders.TileBuilder":
+		{
+      "battery>>>energy":"function p(v){var r = (v);return '能量存储:'+r+'/30720 RF'};",
+			"battery>>>maxReceive":"function p(v){var r = (v);return '最大接收:'+r+' RF/t'};",
+			"done":"function p(v){var r = (v);if(v==0){return '状态:未完成'} else{return '状态:已完成'}};"
+		},
+    
+		"net.minecraft.src.buildcraft.transport.GenericPipe":
+		{
+			"inputOpen":"function p(v){var r = (v);if(v==0){return '输入:关闭'} else{return '输入:打开'}};",
+			"outputOpen":"function p(v){var r = (v);if(v==0){return '输出:关闭'} else{return '输出:打开'}};"
+		},
+    
+		"AutoWorkbench":
+		{
+			"Items>>>0>>>id":"function p(v){var r = (v);return '产物名称:'+names[r]};",
+			"Items>>>0>>>Count":"function p(v){var r = (v);return '产物数量:'+r};"
+		},
+    
+		"MiningWell":
+		{
+			"battery>>>energy":"function p(v){var r = (v);return '能量存储:'+r+'/20480 RF'};",
+			"battery>>>maxReceive":"function p(v){var r = (v);return '最大接收:'+r+' RF/t'};"
+		},
+    
+		"net.minecraft.src.buildcraft.factory.Refinery":
+		{
+			"battery>>>energy":"function p(v){var r = (v);return '能量存储:'+r+'/10000 RF'};",
+			"battery>>>maxReceive":"function p(v){var r = (v);return '最大接收:'+r+' RF/t'};",
+			"tank1>>>FluidName": "原料I种类:",
+			"tank1>>>Amount":"function p(v){var r = (v);return '原料I存量:'+r+'/4000 mb'};",
+			"tank2>>>FluidName": "原料II种类:",
+			"tank2>>>Amount":"function p(v){var r = (v);return '原料II存量:'+r+'/4000 mb'};",
+			"result>>>FluidName": "产物种类:",
+			"result>>>Amount":"function p(v){var r = (v);return '产物存量:'+r+'/4000 mb'};"
+		},
+    
+		"net.minecraft.src.buildcraft.factory.TileChargingTable":
+		{
+			"energy":"function p(v){var r = (v);return '能量存储:'+r+' RF'};",
+			"inv>>>0>>>tag>>>energy":"function p(v){var r = (v);return '机器人能量:'+r+'/100000 RF'};"
+		},
+    
+		"net.minecraft.src.buildcraft.factory.TileProgrammingTable":
+		{
+			"energy":"function p(v){var r = (v);return '能量存储:'+r+' RF'};"
+		},
+    
+		"buildcraft.TileStampingTable":
+		{
+			"energy":"function p(v){var r = (v);return '能量存储:'+r+' RF'};"
+		}
+	}
+}
